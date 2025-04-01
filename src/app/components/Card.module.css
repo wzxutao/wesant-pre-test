@@ -1,0 +1,16 @@
+.card {
+    margin: 8px;
+    padding: 16px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.35);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    user-select: none;
+}
+
+.card:hover {
+    background-color: rgba(191, 225, 225, 0.7);
+}
+
+.card:active {
+    background-color: rgb(166, 217, 217);
+}

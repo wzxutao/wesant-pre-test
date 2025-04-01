@@ -1,0 +1,13 @@
+.card-container {
+    display: flex;
+}
+
+.column {
+    flex: 1 1 0;
+}
+
+.divider {
+    width: 2px;
+    background-color: #ccc;
+    height: 100%;
+}

@@ -1,5 +1,7 @@
 .card-container {
     display: flex;
+    overflow: hidden;
+    min-height: 100vh;
 }
 
 .column {

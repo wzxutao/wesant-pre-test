@@ -7,6 +7,16 @@
     user-select: none;
 }
 
+.placeholder {
+    margin: 8px;
+    padding: 16px;
+    border-radius: 10px;
+    border: 1px dashed rgb(255, 187, 97);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    user-select: none;
+    visibility: hidden;
+}
+
 .card:hover {
     background-color: rgba(191, 225, 225, 0.7);
 }

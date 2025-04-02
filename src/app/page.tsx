@@ -1,4 +1,3 @@
-import Image from "next/image";
 import CardContainer from "./components/CardContainer";
 import { CardInfo } from "./domain/card-info";
 
@@ -27,6 +26,6 @@ const cards: CardInfo[] = [
 
 export default function Home() {
   return (
-    <CardContainer columns={2} cards={cards} />
+    <CardContainer columns={2} rows={7} cards={cards} />
   );
 }

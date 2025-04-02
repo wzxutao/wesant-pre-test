@@ -10,7 +10,7 @@ type CardInfoGrid = (CardInfo | null)[][]
 
 // a range based assigner for distributing cards to columns
 function defaultCardAssigner(columns: number, rows: number, cards: CardInfo[]): CardInfoGrid {
-    const rv: CardInfoGrid = Array(columns).fill(0).map(_ => []);
+    const rv: CardInfoGrid = Array(columns).fill(0).map(() => []);
     const cardsPerColumn = Math.ceil(cards.length / columns);
     for (let i = 0; i < cards.length; i++) {
         rv[Math.floor(i / cardsPerColumn)].push(cards[i]);
@@ -69,7 +69,7 @@ export default function CardContainer(props: {
         const rv = new SortedArray2DIndex(entries);
         setCard2DIndex(rv);
         return rv;
-    }, [columns]);
+    }, []);
 
     const handleDragStart = useCallback((x: number, y: number) => {
         const idx = computeAndSetCard2DIndex();
@@ -125,7 +125,7 @@ export default function CardContainer(props: {
             visibility: 'visible',
             backgroundColor: 'rgba(221, 221, 221, 0.7)'
         }
-    }, [draggingCardIdxAndBox]);
+    }, []);
 
     const columnElements = useMemo(() => {
         return columns.flatMap((cards, colIdx) => [
@@ -155,7 +155,7 @@ export default function CardContainer(props: {
                 ? <div key={`divider-${colIdx}`} className={styles["divider"]}></div>
                 : undefined
         ]);
-    }, [columns, handleDragStart, handleDrag, droppingCardIdxAndBox]);
+    }, [columns, handleDragStart, handleDrag, handleDragEnd, droppingCardIdxAndBox, draggedOverCardStyles]);
 
 
     return (
